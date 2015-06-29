@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{CC5FD16D-436D-48AD-A40C-5A424C6E3E79}") = "AzureEnvCloudService", "AzureEnvCloudService\AzureEnvCloudService.ccproj", "{5243A0AD-C464-4E24-B08B-2EF3BC323C3A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnvVars", "EnvVars\EnvVars.csproj", "{9B35793B-A189-4578-B160-114A453A6333}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5243A0AD-C464-4E24-B08B-2EF3BC323C3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5243A0AD-C464-4E24-B08B-2EF3BC323C3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5243A0AD-C464-4E24-B08B-2EF3BC323C3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5243A0AD-C464-4E24-B08B-2EF3BC323C3A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B35793B-A189-4578-B160-114A453A6333}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B35793B-A189-4578-B160-114A453A6333}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B35793B-A189-4578-B160-114A453A6333}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B35793B-A189-4578-B160-114A453A6333}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
