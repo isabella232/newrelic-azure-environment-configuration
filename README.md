@@ -1,5 +1,5 @@
 # newrelic-azure-environment-configuration
-This is a demo project that illustrates how to use the .NET agent API to set things dynamically, like app name, using the Azure management APIs.  This code illustrates how to use the New Relic [.NET Agent APIs](https://docs.newrelic.com/docs/agents/net-agent/features/net-agent-api) to dynamically assign an Application name that can be reported up to New Relic.  This also illustrates the use of the Azure management APIs (using certs based authentication) to get information for the given WebRole that is not currently available through the [Microsoft.WindowsAzure.ServiceRuntime APIs](https://msdn.microsoft.com/en-us/library/microsoft.windowsazure.serviceruntime.aspx) such as getting the Location of the deployed web role or the deployment slot.
+This is a demo project that illustrates how to use the [New Relic .NET agent API](https://docs.newrelic.com/docs/agents/net-agent/features/net-agent-api) to set things dynamically, like an application's name, using information provided by the Azure management APIs.  This code illustrates how to use the New Relic [.NET Agent APIs](https://docs.newrelic.com/docs/agents/net-agent/features/net-agent-api) to dynamically assign an Application name that can be reported up to New Relic.  This also illustrates the use of the Azure management APIs (using certs based authentication) to get information for the given WebRole that is not currently available through the [Microsoft.WindowsAzure.ServiceRuntime APIs](https://msdn.microsoft.com/en-us/library/microsoft.windowsazure.serviceruntime.aspx) such as getting the Location of the deployed web role or the deployment slot.
 
 The key here is that as your application moves through your environment your naming and data gathering needs might change and if you are hosting 1000 Cloud Services (for instance) then naming each individual VM something meaningful so that you can track down issues when they come up simply does not scale.
 
@@ -11,7 +11,7 @@ The New Relic .NET Agent team (in an effort to make facing the above challenge a
 
 This was written assuming that you are a New Relic user and are using Azure cloud services.
 
-One of the approaches in this code requires that you setup a [Management Certificate](https://msdn.microsoft.com/en-us/library/azure/gg551722.aspx).  Pay close attention to the fact that you must currently upload the management certificate via the [classic portal](manage.windowsazure.com) >> Settings (the last menu item on the left side) >> Management Certificates.  Once you've uploaded the cert make sure to take note of the certificate thumbprint - you need to add a Service Configuration setting using that value. Read [this](https://msdn.microsoft.com/en-us/library/azure/gg551722.aspx) before continuing if this is the option you'll be going with.
+One of the approaches in this code requires that you setup a [Management Certificate](https://msdn.microsoft.com/en-us/library/azure/gg551722.aspx).  Please pay close attention to the fact that you must currently upload the management certificate via the [classic portal](manage.windowsazure.com) >> Settings (the last menu item on the left side) >> Management Certificates.  Once you've uploaded the cert make sure to take note of the certificate thumbprint - you need to add a Service Configuration setting using that value. Read [this](https://msdn.microsoft.com/en-us/library/azure/gg551722.aspx) before continuing if this is the option you'll be going with.
 
 
 
@@ -24,6 +24,7 @@ One of the approaches in this code requires that you setup a [Management Certifi
 **NOTE**
 If you are using the solution files (not the files in the [Simplified-Implementation](./Simplified-Implementation) folder) then make sure to modify the AzureEnvCloudService project properties >> Certificates and Settings with your own settings and certificate thumbprint
 
+![Alt text](/Simplified-Implementation/web_role_settings.png?raw=true "settings")
 
 ### Global.asax.cs
 
