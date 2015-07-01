@@ -18,7 +18,7 @@ One of the approaches in this code requires that you setup a [Management Certifi
 1. Begin by creating a cloud service in Azure
 2. Add the [New Relic nuget package](https://www.nuget.org/packages/NewRelicWindowsAzure) to the Cloud Service project ``` PM> Install-Package NewRelicWindowsAzure ```
 3. (Optional) Add Web Role settings - SubscriptionId - if you are planning on calling the [management APIs](https://msdn.microsoft.com/en-us/library/azure/ee460812.aspx), ManagmentCertificateThumbprint - if you are planning on calling the [management APIs](https://msdn.microsoft.com/en-us/library/azure/ee460812.aspx)
-4. (Optional) Add a newrelic.config to the root of your web role so that you can disable the automatic startup of the agent on your role using ``` autoStart="false" ```.  You'll want to do this so that your application does not report to New Relic before you name it.
+4. (Optional) Add a newrelic.config to the root of your web role so that you can disable the automatic startup of the agent on your role by adding ``` autoStart="false" ``` to the ``` service ``` element.  You'll want to do this so that your application does not report to New Relic before you name it.
 5. Follow the implementation below to either statically or dynamically set the Application name.
 
 **NOTE**
