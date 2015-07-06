@@ -11,7 +11,7 @@ using Microsoft.WindowsAzure.ServiceRuntime;
 
 namespace EnvVars.Helpers
 {
-    public class ServiceManagementRequestUtil
+    public class ServiceManagementRequest
     {
         [NotNull] public static string ANS = "http://schemas.microsoft.com/windowsazure";
         [NotNull]

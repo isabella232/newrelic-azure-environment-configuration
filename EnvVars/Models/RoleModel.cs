@@ -25,7 +25,7 @@ namespace EnvVars.Models
         {
             RoleModel roleInfo = null;
 
-            var hostedServiceNames = ServiceManagementRequestUtil.GetHostedServiceNames();
+            var hostedServiceNames = ServiceManagementRequest.GetHostedServiceNames();
 
             if (hostedServiceNames.Count <= 0) return null;
 
@@ -33,17 +33,17 @@ namespace EnvVars.Models
             {
                 if (string.IsNullOrEmpty(hostedServiceName)) continue;
 
-                var data = ServiceManagementRequestUtil.GetHostedService(hostedServiceName);
+                var data = ServiceManagementRequest.GetHostedService(hostedServiceName);
 
                 if (data == null) continue;
 
                 var deploymentLocation =
-                    data.Element(XName.Get("HostedServiceProperties", ServiceManagementRequestUtil.ANS))
-                        .Element(XName.Get("Location", ServiceManagementRequestUtil.ANS)).Value;
+                    data.Element(XName.Get("HostedServiceProperties", ServiceManagementRequest.ANS))
+                        .Element(XName.Get("Location", ServiceManagementRequest.ANS)).Value;
 
                 var deploymentXElements =
-                    data.Elements(XName.Get("Deployments", ServiceManagementRequestUtil.ANS))
-                        .Elements(XName.Get("Deployment", ServiceManagementRequestUtil.ANS))
+                    data.Elements(XName.Get("Deployments", ServiceManagementRequest.ANS))
+                        .Elements(XName.Get("Deployment", ServiceManagementRequest.ANS))
                         .ToList();
 
                 if (deploymentXElements.Count <= 0) continue;
@@ -51,9 +51,9 @@ namespace EnvVars.Models
                 foreach (
                     var deploymentSlotName in from deployment in deploymentXElements
                                               where deployment != null
-                                              let currentDeploymentId = deployment.Element(XName.Get("PrivateID", ServiceManagementRequestUtil.ANS)).Value
+                                              let currentDeploymentId = deployment.Element(XName.Get("PrivateID", ServiceManagementRequest.ANS)).Value
                                               where currentDeploymentId == RoleEnvironment.DeploymentId
-                                              select deployment.Element(XName.Get("DeploymentSlot", ServiceManagementRequestUtil.ANS)).Value
+                                              select deployment.Element(XName.Get("DeploymentSlot", ServiceManagementRequest.ANS)).Value
                     )
                 {
                     roleInfo = new RoleModel()
