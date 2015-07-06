@@ -2,7 +2,7 @@
 using System.Security.Cryptography.X509Certificates;
 using JetBrains.Annotations;
 
-namespace EnvVars.Helpers
+namespace EnvVars.Utils
 {
     public static class CertificateFactory
     {

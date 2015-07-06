@@ -7,7 +7,7 @@ using System.Security.Cryptography.X509Certificates;
 using System.Xml.Linq;
 using JetBrains.Annotations;
 
-namespace EnvVars.Helpers
+namespace EnvVars.Utils
 {
     public class ServiceManagementRequest
     {

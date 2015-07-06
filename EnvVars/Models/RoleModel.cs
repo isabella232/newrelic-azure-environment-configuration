@@ -1,6 +1,6 @@
 ﻿using System.Linq;
 using System.Xml.Linq;
-using EnvVars.Helpers;
+using EnvVars.Utils;
 using JetBrains.Annotations;
 using Microsoft.WindowsAzure.ServiceRuntime;
 

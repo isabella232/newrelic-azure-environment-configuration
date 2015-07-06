@@ -7,6 +7,8 @@ Project("{CC5FD16D-436D-48AD-A40C-5A424C6E3E79}") = "AzureEnvCloudService", "Azu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnvVars", "EnvVars\EnvVars.csproj", "{9B35793B-A189-4578-B160-114A453A6333}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnvVars.Tests", "EnvVars.Tests\EnvVars.Tests.csproj", "{D7CBA774-17BD-4CC2-9540-84D33A689AB1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{9B35793B-A189-4578-B160-114A453A6333}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9B35793B-A189-4578-B160-114A453A6333}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9B35793B-A189-4578-B160-114A453A6333}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7CBA774-17BD-4CC2-9540-84D33A689AB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7CBA774-17BD-4CC2-9540-84D33A689AB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7CBA774-17BD-4CC2-9540-84D33A689AB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7CBA774-17BD-4CC2-9540-84D33A689AB1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
