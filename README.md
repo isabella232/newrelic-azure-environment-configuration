@@ -53,7 +53,7 @@ private static void SetNewRelicAppNameDynamic()
     var appName = "AzureEnvCloudService";
     try
     {
-        var roleData = RoleModel.GetRoleDetails();
+         var roleData = RoleModel.GetRoleDetails(RoleEnvironment.GetConfigurationSettingValue("SubscriptionId"), RoleEnvironment.GetConfigurationSettingValue("ManagementCertificateThumbPrint"));
         if (roleData != null)
         {
             appName = roleData.FormatName("AzureEnv");
@@ -73,10 +73,13 @@ private static void SetNewRelicAppNameDynamic()
 
 ```
 
-### /Helpers/ServiceManagementRequestUtil.cs
+### /Utilss/ServiceManagementRequest.cs
 
 This is a class that handles all of the requests to both the Management API as well as to the certificate store.  It requires that the webrole settings: SubscriptionId and ManagmentCertificateThumbprint.  
 
+### /Utils/CertificateFactory.cs
+
+This encapsulates the logic to go and get the management certificate out of the cert store using a given thumbprint
 
 ### /Models/RoleModel.cs
 
