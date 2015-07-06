@@ -28,7 +28,7 @@ namespace EnvVars
             var appName = "AzureEnvCloudService";
             try
             {
-                var roleData = RoleModel.GetRoleDetails();
+                var roleData = RoleModel.GetRoleDetails(RoleEnvironment.GetConfigurationSettingValue("SubscriptionId"), RoleEnvironment.GetConfigurationSettingValue("ManagementCertificateThumbPrint"));
                 if (roleData != null)
                 {
                     appName = roleData.FormatName("AzureEnv");
