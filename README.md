@@ -1,7 +1,9 @@
 # newrelic-azure-environment-configuration
 
 A simulation of this project can viewed @ [azureenvcloud.cloudapp.net](http://azureenvcloud.cloudapp.net/?getRoleData=true)
+
 Note the section titled **Cloud Service Info**
+
 
 This is a demo project that illustrates how to use the [New Relic .NET agent API](https://docs.newrelic.com/docs/agents/net-agent/features/net-agent-api) to set things dynamically, like an application's name, using information provided by the Azure management APIs.  This code illustrates how to use the New Relic [.NET Agent APIs](https://docs.newrelic.com/docs/agents/net-agent/features/net-agent-api) to dynamically assign an Application name that can be reported up to New Relic.  This also illustrates the use of the Azure management APIs (using certs based authentication) to get information for the given WebRole that is not currently available through the [Microsoft.WindowsAzure.ServiceRuntime APIs](https://msdn.microsoft.com/en-us/library/microsoft.windowsazure.serviceruntime.aspx) such as getting the Location of the deployed web role or the deployment slot.
 
