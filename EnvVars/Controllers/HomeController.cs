@@ -1,6 +1,7 @@
 ﻿using System.Text;
 using System.Web.Mvc;
 using EnvVars.Models;
+using Microsoft.WindowsAzure.ServiceRuntime;
 
 namespace EnvVars.Controllers
 {
@@ -11,7 +12,7 @@ namespace EnvVars.Controllers
 
             if (getRoleData)
             {
-                var roleData = RoleModel.GetRoleDetails();
+                var roleData = RoleModel.GetRoleDetails(RoleEnvironment.GetConfigurationSettingValue("SubscriptionId"), RoleEnvironment.GetConfigurationSettingValue("ManagementCertificateThumbPrint"));
                 var cloudServiceInfo = new StringBuilder();
 
                 if (roleData != null)
