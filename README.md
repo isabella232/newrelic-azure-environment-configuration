@@ -99,3 +99,7 @@ This is where we can set the new attribute to delay the start up of the agent so
 <service licenseKey="REPLACE_WITH_LICENSE_KEY" ssl="true" autoStart="false" />
 
 ``` 
+
+#Guidelines for contributing
+
+Please read the [guidelines for contributing](GUIDELINES_FOR_CONTRIBUTING.md) to make sure you and others have an amazing experience when giving back to OSS. 
