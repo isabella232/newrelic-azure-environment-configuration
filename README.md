@@ -1,7 +1,5 @@
 # newrelic-azure-environment-configuration
 
-A simulation of this project can viewed @ [azureenvcloud.cloudapp.net](http://azureenvcloud.cloudapp.net/?getRoleData=true)
-
 Note the section titled **Cloud Service Info**
 
 
